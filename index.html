@@ -29,9 +29,18 @@
             <label for="mobile">Mobile:</label>
             <input type="tel" id="mobile" placeholder="Enter mobile number" required>
 
-            <button type="submit">Register</button>
+            <button id="register-button" type="submit">Register</button>
         </form>
     </div>
 
 </body>
+<script>
+    document.getElementById("register-button").addEventListener("click",function(){
+        gtag("event", "register-button",{
+            event_category:"engagement",
+            event_label:"Register Button",
+        });
+        alert("Event Registerd");
+    })
+</script>
 </html>
